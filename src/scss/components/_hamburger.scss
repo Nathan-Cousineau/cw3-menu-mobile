@@ -1,0 +1,33 @@
+.hamburger{
+  cursor: pointer;
+}
+
+.hamburger-animated{
+  position: relative;
+
+  .material-icons{
+    font-size: 3rem;
+    color: var(--color-text-primary);
+  }
+
+  .icon-close{
+    transform: scale(0);
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .icon-open, .icon-close{
+    transition: .3s transform ease-out;
+  }
+
+  &.open{
+    .icon-close{
+      transform: scale(1);
+    }
+
+    .icon-open{
+      transform: scale(0);
+    }
+  }
+}
