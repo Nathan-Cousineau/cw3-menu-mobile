@@ -17,6 +17,12 @@
     position: relative;
     z-index: 2;
   }
+
+  &.open{
+    .mobile-modal{
+      transform: translateY(0);
+    }
+  }
 }
 
 .mobile-modal{
@@ -25,6 +31,7 @@
   left: 0;
   width: 100%;
   transform: translateY(-100%);
+  transition: .3s transform ease-out;
   z-index: 1;
 
   ul{
